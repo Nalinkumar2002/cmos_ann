@@ -38,17 +38,17 @@ This repository presents the design of a CMOS based ANN using CMOS & skywater 13
  * [Schematics And Simulations](#schematics-and-simulations)
    * [Gilbert Cell Multiplier](#Gilbert-Cell-Multiplier)
       * [Schematics](#Schematics)
-      * [Simulation](#Simulation)
+      * [Simulations](#Simulations)
    * [Sigmoid Neural Activation Function](#Sigmoid-Neural-Activation-Function)
       * [Schematics](#Schematics)
-      * [Simulation](#Simulation)
+      * [Simulations](#Simulations)
    * [Simple ANN Network](#Simple-ANN-Network)
       * [Schematics](#Schematics)
-      * [Simulation](#Simulation)
+      * [Simulations](#Simulations)
    * [CMOS ANN Implementation](#CMOS-ANN-Implementation)
       * [Schematics](#Schematics)
-      * [Simulation](#Simulation)
- * [Executing The Pre-Layout Simulations](#Executing-the-pre-layout-simulations)
+      * [Simulations](#Simulations)
+ * [Executing The Simulations](#Executing-the-simulations)
  * [Observations](#Observations)
  * [Future Work](#Future-work)
  * [Author](#Author)
@@ -341,7 +341,7 @@ After creating the schematics, spice netlist was extracted with the help of esim
  $ ngpice neuron.cir.out
  ```
 
- 
+
  > Note: To run simple neuron, naf, gilbert multiplier, run `neuron1.cir.out` , `snaf.out` and `sgil.out`
 
 
