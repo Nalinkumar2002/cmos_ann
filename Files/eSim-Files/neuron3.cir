@@ -1,0 +1,56 @@
+.title KiCad schematic
+v26 /vb2 GND DC
+U2 mul_o2 plot_v1
+U4 mul_o3 plot_v1
+v30 /vss2 GND DC
+v28 /vdd2 GND DC
+v11 /vc1_1 GND sine
+v16 /vdd_3 GND DC
+v17 /vc2_1 GND sine
+v23 /vss_1 GND DC
+v7 /vin2_1 GND sine
+v3 /vin1_1 GND sine
+X3 /vdd_1 /vss_1 /vin1_1 /vin2_1 /vc1_1 /vc2_1 unconnected-_X3-Pad7_ mul_o1 gil_sub
+v29 /vss1 GND DC
+U3 mul_o1 plot_v1
+v4 /vin1_2 GND sine
+v20 /vdd_2 GND DC
+v12 /vc1_2 GND sine
+v18 /vc2_2 GND sine
+v8 /vin2_2 GND sine
+v24 /vss_2 GND DC
+X4 /vdd_2 /vss_2 /vin1_2 /vin2_2 /vc1_2 /vc2_2 unconnected-_X4-Pad7_ mul_o3 gil_sub
+v10 /vc1_3 GND sine
+v14 /vc2_3 GND sine
+v6 /vin2_3 GND sine
+v2 /vin1_3 GND sine
+v22 /vss_3 GND DC
+X2 /vdd_3 /vss_3 /vin1_3 /vin2_3 /vc1_3 /vc2_3 unconnected-_X2-Pad7_ mul_o2 gil_sub
+v15 /vdd GND DC
+X1 /vdd /vss /vin1 /vin2 /vc1 /vc2 unconnected-_X1-Pad7_ mul_o gil_sub
+v1 /vin1 GND sine
+v13 /vc2 GND sine
+v9 /vc1 GND sine
+v5 /vin2 GND sine
+v19 /vdd_1 GND DC
+U1 mul_o plot_v1
+v27 /vdd1 GND DC
+v21 /vss GND DC
+v25 /vb1 GND DC
+U6 vo3 plot_v1
+U8 vo4 plot_v1
+X6 /vdd2 /vss2 /vb2 mul_o2 mul_o3 vo3 vo4 unconnected-_X6-Pad8_ naf_sub
+v32 /vss1_2 GND DC
+X5 /vdd1 /vss1 /vb1 mul_o mul_o1 vo1 vo2 unconnected-_X5-Pad8_ naf_sub
+U5 vo1 plot_v1
+v34 /vdd1_2 GND DC
+U9 vo5 plot_v1
+v33 /vb3 GND DC
+v31 /vdd1_1 GND DC
+X7 /vdd1_1 /vss1_2 vo1 vo2 vo3 vo4 vo5 unconnected-_X7-Pad8_ gil_sub
+U7 vo2 plot_v1
+X8 /vdd1_2 /vss1_2 /vb3 vo5 GND vo6 vo7 unconnected-_X8-Pad8_ naf_sub
+U10 vo6 plot_v1
+v35 /vss1_2 GND DC
+U11 vo7 plot_v1
+.end

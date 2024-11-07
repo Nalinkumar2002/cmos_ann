@@ -1,0 +1,14 @@
+.title KiCad schematic
+M9 out2 out1 vdd vdd mosfet_p
+M11 out2 vi1 Net-_M10-Pad1_ Net-_M10-Pad1_ mosfet_n
+M8 out1 vi2 Net-_M10-Pad1_ Net-_M10-Pad1_ mosfet_n
+U1 vdd vss vi1 vi2 vc1 vc2 out1 out2 PORT
+M6 out2 vi2 Net-_M1-Pad3_ Net-_M1-Pad3_ mosfet_n
+M1 out1 vi1 Net-_M1-Pad3_ Net-_M1-Pad3_ mosfet_n
+M4 out1 out1 vdd vdd mosfet_p
+M5 Net-_M1-Pad3_ vc1 bias bias mosfet_n
+M10 Net-_M10-Pad1_ vc2 bias bias mosfet_n
+M3 Net-_M2-Pad1_ Net-_M2-Pad2_ vss vss mosfet_n
+M2 Net-_M2-Pad1_ Net-_M2-Pad2_ vdd vdd mosfet_p
+M7 bias Net-_M2-Pad2_ vss vss mosfet_n
+.end

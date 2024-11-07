@@ -1,0 +1,145 @@
+.title kicad schematic
+.include sky130nm.lib
+.option scale=1u
+.include naf_sub.sub
+.include gilbert_sub.sub
+v34 /vdd1_2 gnd  dc 900m
+v33 /vb3 gnd  dc 300m
+* u9 vo5 plot_v1
+x13 /vdd1a /vss1a /vb1a mul_oa mul_o1a vo1a vo2a unconnected-_x13-pad8_ naf_sub
+* u12 mul_oa plot_v1
+* u16 vo1a plot_v1
+* u20 vo6 plot_v1
+v62 /vdd1a gnd  dc 900m
+v18 /vc2_2 gnd sine(0 -100m 54k 0 0)
+v8 /vin2_2 gnd sine(0 -100m 5k 0 0)
+v12 /vc1_2 gnd sine(0 100m 54k 0 0)
+v24 /vss_2 gnd  dc -900m
+v52 /vc2_1a gnd sine(0 -100m 22k 0 0)
+v46 /vc1_1a gnd sine(0 100m 22k 0 0)
+v42 /vin2_1a gnd sine(0 -100m 33k 0 0)
+v58 /vss_1a gnd  dc -900m
+x11 /vdd_1a /vss_1a /vin1_1a /vin2_1a /vc1_1a /vc2_1a unconnected-_x11-pad7_ mul_o1a gilbert_sub
+v64 /vss1a gnd  dc -900m
+v60 /vb1a gnd  dc 300m
+* u14 mul_o1a plot_v1
+* u18 vo2a plot_v1
+v66 /vdd1_1a gnd  dc 900m
+x9 /vdda /vssa /vin1a /vin2a /vc1a /vc2a unconnected-_x9-pad7_ mul_oa gilbert_sub
+v50 /vdda gnd  dc 900m
+v40 /vin2a gnd sine(0 -100m 12k 0 0)
+v48 /vc2a gnd sine(0 -100m 44k 0 0)
+v44 /vc1a gnd sine(0 100m 44k 0 0)
+v54 /vdd_1a gnd  dc 900m
+v56 /vssa gnd  dc -900m
+v11 /vc1_1 gnd sine(0 100m 35k 0 0)
+v17 /vc2_1 gnd sine(0 -100m 35k 0 0)
+v7 /vin2_1 gnd sine(0 -200m 6k 0 0)
+v3 /vin1_1 gnd sine(0 200m 6k 0 0)
+v23 /vss_1 gnd  dc -900m
+x3 /vdd_1 /vss_1 /vin1_1 /vin2_1 /vc1_1 /vc2_1 unconnected-_x3-pad7_ mul_o1 gilbert_sub
+v21 /vss gnd  dc -900m
+v25 /vb1 gnd  dc 300m
+* u1 mul_o plot_v1
+v27 /vdd1 gnd  dc 900m
+x1 /vdd /vss /vin1 /vin2 /vc1 /vc2 unconnected-_x1-pad7_ mul_o gilbert_sub
+v19 /vdd_1 gnd  dc 900m
+v1 /vin1 gnd sine(0 200m 3k 0 0)
+v5 /vin2 gnd sine(0 -200m 3k 0 0)
+v9 /vc1 gnd sine(0 100m 50k 0 0)
+v13 /vc2 gnd sine(0 -100m 50k 0 0)
+v15 /vdd gnd  dc 900m
+x7 /vdd1_1 /vss1_1 vo1 vo2 vo3 vo4 unconnected-_x7-pad7_ vo5 gilbert_sub
+* u8 vo4 plot_v1
+v32 /vss1_1 gnd  dc -900m
+* u6 vo3 plot_v1
+x6 /vdd2 /vss2 /vb2 mul_o2 mul_o3 vo3 vo4 unconnected-_x6-pad8_ naf_sub
+v30 /vss2 gnd  dc -900m
+x5 /vdd1 /vss1 /vb1 mul_o mul_o1 vo1 vo2 unconnected-_x5-pad8_ naf_sub
+* u7 vo2 plot_v1
+v31 /vdd1_1 gnd  dc 900m
+* u5 vo1 plot_v1
+v29 /vss1 gnd  dc -900m
+* u3 mul_o1 plot_v1
+x2 /vdd_3 /vss_3 /vin1_3 /vin2_3 /vc1_3 /vc2_3 unconnected-_x2-pad7_ mul_o2 gilbert_sub
+v14 /vc2_3 gnd sine(0 -100m 5k 0 0)
+v22 /vss_3 gnd  dc -900m
+v20 /vdd_2 gnd  dc 900m
+v26 /vb2 gnd  dc 300m
+x4 /vdd_2 /vss_2 /vin1_2 /vin2_2 /vc1_2 /vc2_2 unconnected-_x4-pad7_ mul_o3 gilbert_sub
+* u4 mul_o3 plot_v1
+* u2 mul_o2 plot_v1
+v28 /vdd2 gnd  dc 900m
+v16 /vdd_3 gnd  dc 900m
+v10 /vc1_3 gnd sine(0 100m 5k 0 0)
+v4 /vin1_2 gnd sine(0 100m 5k 0 0)
+v6 /vin2_3 gnd sine(0 -100m 7k 0 0)
+v2 /vin1_3 gnd sine(0 100m 7k 0 0)
+x15 /vdd1_1a /vss1_1a vo1a vo2a vo3a vo4a unconnected-_x15-pad7_ vo6 gilbert_sub
+* u10 vo7 plot_v1
+* u11 vo8 plot_v1
+v67 /vss1_1a gnd  dc -900m
+x8 /vdd1_2 /vss1_2 /vb3 vo5 vo6 vo7 vo8 unconnected-_x8-pad8_ naf_sub
+v35 /vss1_2 gnd  dc -900m
+* u15 mul_o3a plot_v1
+v61 /vb2a gnd  dc 300m
+v63 /vdd2a gnd  dc 900m
+* u13 mul_o2a plot_v1
+x10 /vdd_3a /vss_3a /vin1_3a /vin2_3a /vc1_3a /vc2_3a unconnected-_x10-pad7_ mul_o2a gilbert_sub
+v36 /vin1a gnd sine(0 100m 12k 0 0)
+v38 /vin1_1a gnd sine(0 200m 33k 0 0)
+v51 /vdd_3a gnd  dc 900m
+x12 /vdd_2a /vss_2a /vin1_2a /vin2_2a /vc1_2a /vc2_2a unconnected-_x12-pad7_ mul_o3a gilbert_sub
+v59 /vss_2a gnd  dc -900m
+v41 /vin2_3a gnd sine(0 -100m 25k 0 0)
+v37 /vin1_3a gnd sine(0 100m 25k 0 0)
+v45 /vc1_3a gnd sine(0 100m 15k 0 0)
+v49 /vc2_3a gnd sine(0 -100m 15k 0 0)
+v39 /vin1_2a gnd sine(0 100m 25k 0 0)
+v43 /vin2_2a gnd sine(0 -100m 25k 0 0)
+v47 /vc1_2a gnd sine(0 100m 15k 0 0)
+v53 /vc2_2a gnd sine(0 -100m 15k 0 0)
+v55 /vdd_2a gnd  dc 900m
+v57 /vss_3a gnd  dc -900m
+x14 /vdd2a /vss2a /vb2a mul_o2a mul_o3a vo3a vo4a unconnected-_x14-pad8_ naf_sub
+* u19 vo4a plot_v1
+v65 /vss2a gnd  dc -900m
+* u17 vo3a plot_v1
+.tran 20ns 0.3ms
+
+* Control Statements 
+.control
+run
+print allv > plot_data_v.txt
+print alli > plot_data_i.txt
+* plot v(vo5)
+* plot v(mul_oa)
+* plot v(vo1a)
+* plot v(vo6)
+* plot v(mul_o1a)
+* plot v(vo2a)
+* plot v(mul_o)
+* plot v(vo4)
+* plot v(vo3)
+* plot v(vo2)
+* plot v(vo1)
+* plot v(mul_o1)
+* plot v(mul_o3)
+* plot v(mul_o2)
+plot v(vo7)
+plot v(vo8)
+plot v(vo7,vo8)
+plot v(/vin1) v(/vc1)
+plot v(/vin1_1) v(/vc1_1)
+plot v(/vin1_2) v(/vc1_2)
+plot v(/vin1_3) v(/vc1_3)
+plot v(/vin1a) v(/vc1a)
+plot v(/vin1_1a) v(/vc1_1a)
+plot v(/vin1_2a) v(/vc1_2a)
+plot v(/vin1_3a) v(/vc1_3a)
+* plot v(mul_o3a)
+* plot v(mul_o2a)
+* plot v(vo4a)
+* plot v(vo3a)
+.endc
+.end

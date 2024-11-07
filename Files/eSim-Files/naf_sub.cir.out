@@ -1,0 +1,25 @@
+.title kicad schematic
+
+m10 /vo_n net-_m10-pad2_ /vdd /vdd mosfet_p
+m12 /vo2 /vb /vdd /vdd mosfet_p
+m9 net-_m11-pad2_ net-_m11-pad2_ /vss /vss mosfet_n
+m5 net-_m1-pad2_ /vin1 net-_m5-pad3_ /vdd mosfet_p
+* u1 /vdd /vss /vb /vin1 /vin2 /vo1 /vo2 /vo_n port
+m6 net-_m1-pad2_ net-_m1-pad2_ /vss /vss mosfet_n
+m8 net-_m11-pad2_ /vin2 net-_m5-pad3_ /vdd mosfet_p
+m7 net-_m5-pad3_ /vb /vdd /vdd mosfet_p
+m4 net-_m10-pad2_ net-_m10-pad2_ /vdd /vdd mosfet_p
+m2 /vo1 /vb /vdd /vdd mosfet_p
+m11 /vo_n net-_m11-pad2_ /vss /vss mosfet_n
+m13 /vo2 net-_m11-pad2_ /vss /vss mosfet_n
+m3 net-_m10-pad2_ net-_m1-pad2_ /vss /vss mosfet_n
+m1 /vo1 net-_m1-pad2_ /vss /vss mosfet_n
+.tran 0e-00 0e-00 0e-00
+
+* Control Statements 
+.control
+run
+print allv > plot_data_v.txt
+print alli > plot_data_i.txt
+.endc
+.end

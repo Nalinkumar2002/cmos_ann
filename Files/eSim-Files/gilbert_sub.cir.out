@@ -1,0 +1,23 @@
+.title kicad schematic
+
+m9 out2 out1 vdd vdd mosfet_p
+m11 out2 vi1 net-_m10-pad1_ net-_m10-pad1_ mosfet_n
+m8 out1 vi2 net-_m10-pad1_ net-_m10-pad1_ mosfet_n
+* u1 vdd vss vi1 vi2 vc1 vc2 out1 out2 port
+m6 out2 vi2 net-_m1-pad3_ net-_m1-pad3_ mosfet_n
+m1 out1 vi1 net-_m1-pad3_ net-_m1-pad3_ mosfet_n
+m4 out1 out1 vdd vdd mosfet_p
+m5 net-_m1-pad3_ vc1 bias bias mosfet_n
+m10 net-_m10-pad1_ vc2 bias bias mosfet_n
+m3 net-_m2-pad1_ net-_m2-pad2_ vss vss mosfet_n
+m2 net-_m2-pad1_ net-_m2-pad2_ vdd vdd mosfet_p
+m7 bias net-_m2-pad2_ vss vss mosfet_n
+.tran 0e-00 0e-00 0e-00
+
+* Control Statements 
+.control
+run
+print allv > plot_data_v.txt
+print alli > plot_data_i.txt
+.endc
+.end

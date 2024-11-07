@@ -1,0 +1,37 @@
+.title kicad schematic
+
+.include naf_sub.sub
+.include gilbert_sub.sub
+.include sky130nm.lib
+.option scale=1u
+v7 /vb gnd  dc 300m
+v9 /vss_1 gnd  dc -900m
+v8 /vdd_1 gnd  dc 900m
+* u3 vo2 plot_v1
+* u2 vo1 plot_v1
+x2 /vdd_1 /vss_1 /vb mul_o gnd vo1 vo2 unconnected-_x2-pad8_ naf_sub
+v6 /vss gnd  dc -900m
+x1 /vdd /vss /vin1 /vin2 /vc1 /vc2 unconnected-_x1-pad7_ mul_o gilbert_sub
+* u1 mul_o plot_v1
+v5 /vdd gnd  dc 900m
+v3 /vc1 gnd sine(0 100m 50k 0 0)
+v2 /vin2 gnd sine(0 -100m 5k 0 0)
+v1 /vin1 gnd sine(0 100m 5k 0 0)
+v4 /vc2 gnd sine(0 -100m 50k 0 0)
+.tran 20ns 0.3ms
+
+
+* Control Statements 
+.control
+run
+print allv > plot_data_v.txt
+print alli > plot_data_i.txt
+set color2 = orange
+set xbrushwidth = 2.5
+plot v(/vin1) v(/vc1)
+plot v(mul_o)
+plot v(mul_o) 0 
+plot v(vo1,vo2)
+
+.endc
+.end

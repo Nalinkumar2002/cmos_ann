@@ -1,0 +1,16 @@
+.title KiCad schematic
+M10 /vo_n Net-_M10-Pad2_ /vdd /vdd mosfet_p
+M12 /vo2 /vb /vdd /vdd mosfet_p
+M9 Net-_M11-Pad2_ Net-_M11-Pad2_ /vss /vss mosfet_n
+M5 Net-_M1-Pad2_ /vin1 Net-_M5-Pad3_ /vdd mosfet_p
+U1 /vdd /vss /vb /vin1 /vin2 /vo1 /vo2 /vo_n PORT
+M6 Net-_M1-Pad2_ Net-_M1-Pad2_ /vss /vss mosfet_n
+M8 Net-_M11-Pad2_ /vin2 Net-_M5-Pad3_ /vdd mosfet_p
+M7 Net-_M5-Pad3_ /vb /vdd /vdd mosfet_p
+M4 Net-_M10-Pad2_ Net-_M10-Pad2_ /vdd /vdd mosfet_p
+M2 /vo1 /vb /vdd /vdd mosfet_p
+M11 /vo_n Net-_M11-Pad2_ /vss /vss mosfet_n
+M13 /vo2 Net-_M11-Pad2_ /vss /vss mosfet_n
+M3 Net-_M10-Pad2_ Net-_M1-Pad2_ /vss /vss mosfet_n
+M1 /vo1 Net-_M1-Pad2_ /vss /vss mosfet_n
+.end

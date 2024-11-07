@@ -1,0 +1,16 @@
+.title KiCad schematic
+v7 /vb GND DC
+v9 /vss_1 GND DC
+v8 /vdd_1 GND DC
+U3 vo2 plot_v1
+U2 vo1 plot_v1
+X2 /vdd_1 /vss_1 /vb mul_o GND vo1 vo2 unconnected-_X2-Pad8_ naf_sub
+v6 /vss GND DC
+X1 /vdd /vss /vin1 /vin2 /vc1 /vc2 unconnected-_X1-Pad7_ mul_o gil_sub
+U1 mul_o plot_v1
+v5 /vdd GND DC
+v3 /vc1 GND sine
+v2 /vin2 GND sine
+v1 /vin1 GND sine
+v4 /vc2 GND sine
+.end

@@ -1,0 +1,47 @@
+.title CMOS ANN Implementation
+
+.include naf_sub.sub
+.include gilbert_sub.sub
+
+.include sky130nm.lib
+.option scale=1u
+
+
+* u3 vo2 plot_v1
+v8 /vdd_2 gnd  dc 900m
+* u2 vo1 plot_v1
+x2 /vdd_2 /vss_2 /vb mul_o mul1_o vo1 vo2 unconnected-_x2-pad8_ naf_sub
+v7 /vb gnd  dc 300m
+* u1 mul_o plot_v1
+* u4 mul1_o plot_v1
+v9 /vss_2 gnd  dc -900m
+v5 /vdd gnd  dc 900m
+v2 /vin2 gnd sine(0 -100m 5k 0 0)
+v1 /vin1 gnd sine(0 100m 5k 0 0)
+x1 /vdd /vss /vin1 /vin2 /vc1 /vc2 unconnected-_x1-pad7_ mul_o gilbert_sub
+v4 /vc2 gnd sine(0 -100m 50k 0 0)
+v3 /vc1 gnd sine(0 100m 50k 0 0)
+v6 /vss gnd  dc -900m
+v14 /vdd_1 gnd  dc 900m
+x3 /vdd_1 /vss_1 /vin1_1 /vin2_1 /vc1_1 /vc2_1 unconnected-_x3-pad7_ mul1_o gilbert_sub
+v15 /vss_1 gnd  dc -900m
+v10 /vin1_1 gnd sine(0 150m 3k 0 0)
+v11 /vin2_1 gnd sine(0 -150m 3k 0 0)
+v12 /vc1_1 gnd  sine(0 150m 30k 0 0)
+v13 /vc2_1 gnd  sine(0 -150m 30k 0 0)
+.tran 20ns 0.3ms
+
+* Control Statements 
+.control
+run
+print allv > plot_data_v.txt
+print alli > plot_data_i.txt
+set color2 = orange
+set xbrushwidth = 2.5
+plot v(/vin1) v(/vc1)
+plot v(/vin1_1) v(/vc1_1)
+plot v(vo1,vo2)
+plot v(mul_o)
+plot v(mul1_o)
+.endc
+.end

@@ -1,0 +1,17 @@
+* Subcircuit gilbert_sub
+.subckt gilbert_sub vdd vss vi1 vi2 vc1 vc2 out1 out2 
+.title kicad schematic
+xm9 out2 out1 vdd vdd sky130_fd_pr__pfet_01v8 W=2 L=0.18
+xm11 out2 vi1 net-_m10-pad1_ net-_m10-pad1_ sky130_fd_pr__nfet_01v8 W=0.8 L=0.18
+xm8 out1 vi2 net-_m10-pad1_ net-_m10-pad1_ sky130_fd_pr__nfet_01v8 W=0.8 L=0.18
+xm6 out2 vi2 net-_m1-pad3_ net-_m1-pad3_ sky130_fd_pr__nfet_01v8 W=0.8 L=0.18
+xm1 out1 vi1 net-_m1-pad3_ net-_m1-pad3_ sky130_fd_pr__nfet_01v8 W=0.8 L=0.18
+xm4 out1 out1 vdd vdd sky130_fd_pr__pfet_01v8 W=2 L=0.18
+xm5 net-_m1-pad3_ vc1 bias bias sky130_fd_pr__nfet_01v8 W=0.8 L=0.18
+xm10 net-_m10-pad1_ vc2 bias bias sky130_fd_pr__nfet_01v8 W=0.8 L=0.18
+xm3 net-_m2-pad2_ net-_m2-pad2_ vss vss sky130_fd_pr__nfet_01v8 W=0.8 L=0.18
+xm2 net-_m2-pad2_ net-_m2-pad2_ vdd vdd sky130_fd_pr__pfet_01v8 W=2 L=0.18
+xm7 bias net-_m2-pad2_ vss vss sky130_fd_pr__nfet_01v8 W=0.8 L=0.18
+* Control Statements
+
+.ends gilbert_sub

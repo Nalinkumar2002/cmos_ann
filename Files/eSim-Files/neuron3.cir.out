@@ -1,0 +1,86 @@
+.title kicad schematic
+
+.include naf_sub.sub
+.include gilbert_sub.sub
+
+.include sky130nm.lib
+.option scale=1u
+
+
+v26 /vb2 gnd  dc 300m
+* u2 mul_o2 plot_v1
+* u4 mul_o3 plot_v1
+v30 /vss2 gnd  dc -900m
+v28 /vdd2 gnd  dc 900m
+v11 /vc1_1 gnd sine(0 100m 5k 0 0)
+v16 /vdd_3 gnd  dc 900m
+v17 /vc2_1 gnd sine(0 -100m 5k 0 0)
+v23 /vss_1 gnd  dc -900m
+v7 /vin2_1 gnd sine(0 -100m 10k 0 0)
+v3 /vin1_1 gnd sine(0 100m 10k 0 0)
+x3 /vdd_1 /vss_1 /vin1_1 /vin2_1 /vc1_1 /vc2_1 unconnected-_x3-pad7_ mul_o1 gilbert_sub
+v29 /vss1 gnd  dc -900m
+* u3 mul_o1 plot_v1
+v4 /vin1_2 gnd sine(0 100m 15k 0 0)
+v20 /vdd_2 gnd  dc 900m
+v12 /vc1_2 gnd sine(0 100m 20k 0 0)
+v18 /vc2_2 gnd sine(0 -100m 20k 0 0)
+v8 /vin2_2 gnd sine(0 -100m 15k 0 0)
+v24 /vss_2 gnd  dc -900m
+x4 /vdd_2 /vss_2 /vin1_2 /vin2_2 /vc1_2 /vc2_2 unconnected-_x4-pad7_ mul_o3 gilbert_sub
+v10 /vc1_3 gnd sine(0 100m 25k 0 0)
+v14 /vc2_3 gnd sine(0 -100m 25k 0 0)
+v6 /vin2_3 gnd sine(0 -100m 30k 0 0)
+v2 /vin1_3 gnd sine(0 100m 30k 0 0)
+v22 /vss_3 gnd  dc -900m
+x2 /vdd_3 /vss_3 /vin1_3 /vin2_3 /vc1_3 /vc2_3 unconnected-_x2-pad7_ mul_o2 gilbert_sub
+v15 /vdd gnd  dc 900m
+x1 /vdd /vss /vin1 /vin2 /vc1 /vc2 unconnected-_x1-pad7_ mul_o gilbert_sub
+v1 /vin1 gnd sine(0 100m 45k 0 0)
+v13 /vc2 gnd sine(0 -100m 40k 0 0)
+v9 /vc1 gnd sine(0 100m 40k 0 0)
+v5 /vin2 gnd sine(0 -100m 45k 0 0)
+v19 /vdd_1 gnd  dc 900m
+* u1 mul_o plot_v1
+v27 /vdd1 gnd  dc 900m
+v21 /vss gnd  dc -900m
+v25 /vb1 gnd  dc 300m
+* u6 vo3 plot_v1
+* u8 vo4 plot_v1
+x6 /vdd2 /vss2 /vb2 mul_o2 mul_o3 vo3 vo4 unconnected-_x6-pad8_ naf_sub
+v32 /vss1_1 gnd  dc -900m
+x5 /vdd1 /vss1 /vb1 mul_o mul_o1 vo1 vo2 unconnected-_x5-pad8_ naf_sub
+* u5 vo1 plot_v1
+v34 /vdd1_2 gnd  dc 900m
+* u9 vo5 plot_v1
+v33 /vb3 gnd  dc 300m
+v31 /vdd1_1 gnd  dc 900m
+x7 /vdd1_1 /vss1_1 vo1 vo2 vo3 vo4 vo5 unconnected-_x7-pad8_ gilbert_sub
+* u7 vo2 plot_v1
+x8 /vdd1_2 /vss1_2 /vb3 vo5 gnd vo6 vo7 unconnected-_x8-pad8_ naf_sub
+* u10 vo6 plot_v1
+v35 /vss1_2 gnd  dc -900m
+* u11 vo7 plot_v1
+.tran 20ns 0.3ms
+
+* Control Statements 
+.control
+run
+print allv > plot_data_v.txt
+print alli > plot_data_i.txt
+set color2 = orange
+set xbrushwidth = 2.5
+
+plot v(mul_o2)
+plot v(mul_o3)
+plot v(mul_o1)
+plot v(mul_o)
+plot v(vo3)
+plot v(vo4)
+plot v(vo1)
+plot v(vo5)
+plot v(vo2)
+plot v(vo6)
+plot v(vo7)
+.endc
+.end
