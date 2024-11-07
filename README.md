@@ -169,7 +169,7 @@ The block diagram of the proposed CMOS ANN can be found below: </br>
   * Clone this repository using git clone command 
  
  ```
- $ git clone https://github.com/Nalinkumar2002/cmos_ann.git
+ git clone https://github.com/Nalinkumar2002/cmos_ann.git
 ```
 
 </br>
@@ -207,7 +207,7 @@ The block diagram of the proposed CMOS ANN can be found below: </br>
  
    * Use git clone method  
    
-    $ git clone https://foss-eda-tools.googlesource.com/skywater-pdk/libs/sky130_fd_pr
+    git clone https://foss-eda-tools.googlesource.com/skywater-pdk/libs/sky130_fd_pr
    
  > Place `sky130_fd_pr` folder in current working directory to avoid errors during simulations.
  
