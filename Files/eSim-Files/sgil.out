@@ -1,0 +1,31 @@
+.title kicad schematic
+
+.include gilbert_sub.sub
+.include sky130nm.lib
+.option scale=1u
+
+
+v6 /vss gnd  dc -900m
+* u1 vout1 plot_v1
+* u2 vout2 plot_v1
+x1 /vdd /vss /vin1 /vin2 /vc1 /vc2 vout1 vout2 gilbert_sub
+v3 /vc1 gnd sine(0 100m 5k 0 0)
+v2 /vin2 gnd sine(0 -100m 50k  0 0)
+v1 /vin1 gnd sine(0 100m 50k  0 0)
+v4 /vc2 gnd sine(0 -100m 5k  0 0)
+v5 /vdd gnd  dc 900m
+.tran 20ns 0.3ms
+
+* Control Statements 
+.control
+run
+* --- Changing Plot styles --- *
+set color2 = orange
+set xbrushwidth = 2.5
+set grid off
+print allv > plot_data_v.txt
+print alli > plot_data_i.txt
+plot v(/vin1) v(/vc1)
+plot v(vout2)
+.endc
+.end

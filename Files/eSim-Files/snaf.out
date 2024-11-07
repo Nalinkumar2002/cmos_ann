@@ -1,0 +1,25 @@
+.title kicad schematic
+
+.include naf_sub.sub
+.include sky130nm.lib
+.option scale=1u
+
+
+v4 /vcc gnd  dc 900m
+v5 /vss gnd  dc -900m
+v3 /v2 gnd dc 0
+v1 /vb gnd  dc 300m
+v2 /v1 gnd dc 0
+x1 /vcc /vss /vb /v1 /v2 vo1 vo2 unconnected-_x1-pad8_ naf_sub
+.dc v2 -1e-00 1e-00 .05e-00
+
+* Control Statements 
+.control
+run
+set color2 = orange
+set xbrushwidth = 2.5
+print allv > plot_data_v.txt
+print alli > plot_data_i.txt
+plot v(vo1,vo2)
+.endc
+.end
