@@ -139,6 +139,7 @@ The block diagram of the proposed CMOS ANN can be found below: </br>
       * Cider1b1
    
       🔗 http://ngspice.sourceforge.net/
+     
         
  🔶 Sky130 PDK
  
@@ -147,8 +148,10 @@ The block diagram of the proposed CMOS ANN can be found below: </br>
    
      🔗 https://github.com/google/skywater-pdk
 
+</br>
 
 *[Back To Top](#Table-of-Contents)* ⤴️ 
+
 </br>
 
 # Clone This Repository 
@@ -343,10 +346,8 @@ After creating the schematics, spice netlist was extracted with the help of esim
 </br>
  
 # Future Work 
-
-  🏁 Accuracy can be increased
   
-  🏁 Further improvements and modifications in this work can lead to the development of generic technology which results in the bidirectional communication between the living neurons and the micro-electronic neurons
+  🏁  Further improvements and modifications in this work can lead to the development of generic technology which results in the bidirectional communication between the living neurons and the micro-electronic neurons
  
  # Author
  
