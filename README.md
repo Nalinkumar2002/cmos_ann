@@ -18,7 +18,7 @@
 
 # Design of CMOS based Artificial Neural Network (ANN)
 
-This repository presents the design of a CMOS based ANN using CMOS & skywater 130nm PDK
+This repository presents the design of a CMOS based ANN using skywater 130nm PDK
 
 
 ![GIF](Images/gif.gif)
@@ -242,6 +242,12 @@ After creating the schematics, spice netlist was extracted with the help of esim
 <img src="Images/sim_gil_vout.png">
 </p>
 
+</br>
+
+*[Back To Top](#Table-of-Contents)* ⤴️ 
+
+</br>
+
 ## Sigmoid Neural Activation Function
 
 ### Schematics 
@@ -262,6 +268,12 @@ After creating the schematics, spice netlist was extracted with the help of esim
 <p align="center">
 <img src="Images/sim_naf_dc.png">
 </p>
+
+</br>
+
+*[Back To Top](#Table-of-Contents)* ⤴️ 
+
+</br>
 
 ## Simple ANN Network
 
@@ -302,6 +314,11 @@ After creating the schematics, spice netlist was extracted with the help of esim
 <img src="Images/sim_ann2_o3.png">
 </p>
 
+</br>
+
+*[Back To Top](#Table-of-Contents)* ⤴️ 
+
+</br>
 
 ## CMOS ANN Implementation
 
@@ -336,9 +353,13 @@ After creating the schematics, spice netlist was extracted with the help of esim
 # Executing The Simulations
  
   * Run the `neuron.cir.out` file in ngspice to perform simulations
+  * 
+  * Please check `spice_lib` folder is in current directory. It consists of skywater 130nm MOSFET models `sky130_fd_pr__nfet_01v8__tt` & `sky130_fd_pr__nfet_01v8__tt`.
+
+ ### In `Ngspice` give the following command
  
  ``` 
- $ ngpice neuron.cir.out
+ neuron.cir.out
  ```
 
 
