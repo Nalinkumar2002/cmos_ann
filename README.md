@@ -32,13 +32,23 @@ This repository presents the design of a CMOS based ANN using CMOS & skywater 13
  * [Specifications](#Specifications)
  * [Open Source Tools Used](#Open-Source-Tools-Used)
  * [Clone This Repository](#Clone-This-Repository)
- * [Pre Layout Simulations](#Pre-Layout-Simulations)
-   * [Tools And PDK Used For Pre-Layout Simulations](#Tools-and-PDK-used-for-pre-layout-simulations)
+ * [Simulation Tools](#Simulation-Tools)
+   * [Tools And PDK Used For Design and Simulations](#Tools-And-PDK-Used-For-Design-and-Simulations)
      * [Installation Of Tools And PDK](#Installation-of-Tools-and-PDK)
-   * [Pre-Layout Schematics And Simulations](#Pre-layout-schematics-and-simulations)
-     * [Schematics](#Schematics)
-     * [Simulation](#[Simulation)
-   * [Executing The Pre-Layout Simulations](#Executing-the-pre-layout-simulations)
+ * [Schematics And Simulations](#schematics-and-simulations)
+   * [Gilbert Cell Multiplier](#Gilbert-Cell-Multiplier)
+      * [Schematics](#Schematics)
+      * [Simulation](#Simulation)
+   * [Sigmoid Neural Activation Function](#Sigmoid-Neural-Activation-Function)
+      * [Schematics](#Schematics)
+      * [Simulation](#Simulation)
+   * [Simple ANN Network](#Simple-ANN-Network)
+      * [Schematics](#Schematics)
+      * [Simulation](#Simulation)
+   * [CMOS ANN Implementation](#CMOS-ANN-Implementation)
+      * [Schematics](#Schematics)
+      * [Simulation](#Simulation)
+ * [Executing The Pre-Layout Simulations](#Executing-the-pre-layout-simulations)
  * [Observations](#Observations)
  * [Future Work](#Future-work)
  * [Author](#Author)
@@ -323,13 +333,17 @@ After creating the schematics, spice netlist was extracted with the help of esim
 
 </br>
 
-## Executing The Simulations
+# Executing The Simulations
  
   * Run the `neuron.cir.out` file in ngspice to perform simulations
  
  ``` 
  $ ngpice neuron.cir.out
  ```
+
+ 
+ > Note: To run simple neuron, naf, gilbert multiplier, run `neuron1.cir.out` , `snaf.out` and `sgil.out`
+
 
 # Observations
 
