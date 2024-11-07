@@ -351,10 +351,19 @@ After creating the schematics, spice netlist was extracted with the help of esim
 </br>
 
 # Executing The Simulations
+
+
+  * Change directory to `eSim-Files` 
+
+ ``` 
+ cd Files/eSim-Files
+ ```
  
   * Run the `neuron.cir.out` file in ngspice to perform simulations
-  * 
+    
   * Please check `spice_lib` folder is in current directory. It consists of skywater 130nm MOSFET models `sky130_fd_pr__nfet_01v8__tt` & `sky130_fd_pr__nfet_01v8__tt`.
+
+
 
  ### In `Ngspice` give the following command
  
