@@ -138,7 +138,7 @@ The block diagram of the proposed CMOS ANN can be found below: </br>
 | Supply Voltage              | VSS    | -         | -900          |           | mV   |
 | Operating Temperature Range | T      | -40       | +27           | +85       | °C   |
 | Input   Voltage             | Vin    | -1        | 100m          | 1         | V    |
-| Input   Voltage             | Vout   | -1        | -             | 1         | V    |
+| Output   Voltage             | Vout   | -1        | -             | 1         | V    |
 
 
  
