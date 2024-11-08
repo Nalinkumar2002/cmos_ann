@@ -84,6 +84,22 @@ For ANN design, each neuron connection (synapse) requires a multiplier to scale 
 The basic configuration of a Gilbert cell uses a differential pair with cross-coupled transistors that produce an output current proportional to the product of the input signals. By using CMOS transistors in this structure, it can be made compatible with standard CMOS fabrication processes.
 This analog multiplication enables the neuron to process signals with minimal power and high speed compared to digital multipliers, which can be a bottleneck in traditional ANN implementations.
 
+For a CMOS-based Gilbert cell, the output current **I<sub>out</sub>** is proportional to the product of two differential input voltages **V<sub>x</sub>** and **V<sub>y</sub>** , given by:
+
+<p align="center">
+I<sub>out</sub> = (I<sub>tail</sub> / 4V<sub>T</sub><sup>2</sup>) * V<sub>x</sub> * V<sub>y</sub>
+</p> 
+
+where:
+- **I<sub>tail</sub>**: Tail current of the differential pairs
+- **V<sub>T</sub>**: Thermal voltage, approximately 26 mV at room temperature
+- **V<sub>x</sub> = V<sub>x1</sub> - V<sub>x2</sub>**: Differential input voltage for the first pair
+- **V<sub>y</sub> = V<sub>y1</sub> - V<sub>y2</sub>**: Differential input voltage for the second pair
+
+This equation assumes small-signal operation, allowing the output current **I<sub>out</sub>** to approximate the product of **V<sub>x</sub>** and **V<sub>y</sub>** in a linear fashion.
+
+
+
   ##    Sigmoid Activation Function in CMOS
 
   <h3 align="center">Sigmoid - Neural Activation function</h3>
